@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Neeraj's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body {
+            background-color: #000021;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .contact-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .contact-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #aa3eaa;
+        }
+        .contact-container p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .contact-container .highlight {
+            color: #aa3eaa;
+        }
+        .contact-container ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        .contact-container ul li {
+            margin-bottom: 10px;
+        }
+        .contact-container ul li a {
+            text-decoration: none;
+            color: #aa3eaa;
+            font-size: 1.2rem;
+        }
+        .contact-container ul li a:hover {
+            color: #ffffff;
+        }
+        nav {
+            padding-top: 1.7rem;
+            display: flex;
+            justify-content: space-around;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+            position: relative;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover {
+            font-size: 1.04rem;
+            color: rgb(151, 151, 255);
+        }
+        nav ul li ul.dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgb(18, 18, 62);
+            padding: 10px 0;
+            z-index: 1000;
+        }
+        nav ul li ul.dropdown li {
+            margin: 0;
+        }
+        nav ul li ul.dropdown li a {
+            padding: 10px 20px;
+            display: block;
+            color: white;
+        }
+        nav ul li ul.dropdown li a:hover {
+            background-color: rgb(151, 151, 255);
+            color: white;
+        }
+        nav ul li:hover ul.dropdown {
+            display: block;
+        }
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .contact-container {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body id="home">
+    <header>
+        <nav>
+            <div class="left">
+                Neeraj's Portfolio
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li>
+                        <a href="#">Projects</a>
+                        <ul class="dropdown">
+                            <li><a href="/project1">Project 1</a></li>
+                            <li><a href="/project2">Project 2</a></li>
+                            <li><a href="/project3">Project 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="contact-container">
+            <h1>Contact Me</h1>
+            <p>If you'd like to get in touch, feel free to reach out through any of the methods below:</p>
+            <ul>
+                <li>Email: <a href="mailto:bassanneeraj@gmail.com">bassanneeraj@gmail.com</a></li>
+                <li>Phone: <a href="tel:+919541876404">+919541876404</a></li>
+                <li>GitHub: <a href="https://github.com/neerajbhasin-8055" target="_blank">github.com/neerajbhasin-8055</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/neeraj-bhasin-06506129b/" target="_blank">linkedin.com/in/neeraj-bhasin-06506129b</a></li>
+                <li>Instagram: <a href="https://www.instagram.com/neeraj_.0_1/" target="_blank">instagram.com/neeraj_.0_1</a></li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                Neeraj's Portfolio
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <div class="footer-items"><img src="./images/github.png"><li><a href="https://github.com/neerajbhasin-8055">Github</a></li></div>
+                    <div class="footer-items"><img src="./images/linkedin.png"><li><a href="https://www.linkedin.com/in/neeraj-bhasin-06506129b/">LinkedIn</a></li></div>
+                    <div class="footer-items"><img src="./images/instagram.png"><li><a href="https://www.instagram.com/neeraj_.0_1/">Instagram</a></li></div>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <div><img src="./images/developer.png">
+                    <p>www.neerajsportfolio.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-rights">
+            <p>© 2024 Neeraj | All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

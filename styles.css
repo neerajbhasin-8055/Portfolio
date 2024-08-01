@@ -3,39 +3,66 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* overflow-x: hidden;  */
 }
+
 body {
     background-color: rgb(0, 0, 33);
     color: white;
     font-family: 'Poppins', 'sans-serif';
+    /* overflow-x: hidden; Prevent horizontal scrolling */
 }
+
 nav {
     padding-top: 1.7rem;
     display: flex;
     justify-content: space-around;
     height: 80px;
     background-color: rgb(18, 18, 62);
+    position: relative;
 }
+
 nav ul {
     display: flex;
     justify-content: center;
 }
+
 nav ul li {
     list-style: none;
     margin: 0 23px;
 }
+
 nav ul li a {
     text-decoration: none;
     color: white;
     transition: all 0.3s ease;
 }
+
 nav ul li a:hover {
     font-size: 1.04rem;
     color: rgb(151, 151, 255);
 }
+
+nav .right {
+    display: flex;
+}
+
+.ham {
+    filter: invert(1);
+    width: 25px;
+    display: none;
+}
+
+.cross {
+    filter: invert(1);
+    width: 25px;
+    display: none;
+}
+
 .left {
     font-size: 1.3rem;
 }
+
 .firstsection {
     display: flex;
     justify-content: space-around;
@@ -43,17 +70,21 @@ nav ul li a:hover {
     align-items: center;
     flex-wrap: wrap;
 }
-.firstsection > div {
+
+.firstsection>div {
     width: 100%;
     text-align: center;
     margin-bottom: 30px;
 }
+
 .leftsection {
     font-size: 2.5rem;
 }
+
 .leftsection .buttons {
     padding-top: 20px;
 }
+
 .leftsection .btn {
     padding: 12px;
     border-radius: 6px;
@@ -64,94 +95,114 @@ nav ul li a:hover {
     cursor: pointer;
     margin-right: 10px;
 }
+
 .rightsection img {
     max-width: 100%;
     height: auto;
     margin-top: 50px;
 }
+
 .purple {
     color: rgb(170, 62, 170);
 }
+
 #element {
     color: rgb(170, 62, 170);
 }
+
 .secondsection {
     max-width: 80vw;
     margin: auto;
     margin-top: 50px;
     padding: 0 20px;
 }
+
 main hr {
     border: 0;
     height: 0.4px;
     background-color: rgb(67, 67, 113);
     margin-top: 80px;
 }
+
 .secondsection h1 {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 20px;
 }
+
 .gray {
     color: gray;
     text-align: center;
 }
+
 .secondsection .box {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 40px;
 }
+
 .secondsection .box .vertical {
     flex: 1 1 200px;
     margin: 20px;
     text-align: center;
 }
+
 .vertical-img {
     width: 50px;
     margin-bottom: 10px;
 }
+
 .vertical-title {
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
+
 .vertical-desc {
     font-size: 0.9rem;
     color: gray;
 }
+
 .skill-set {
     text-align: center;
     font-size: 1.5rem;
     font-weight: 500;
     margin-top: 30px;
 }
+
 .secondsection .box2-heading {
     text-align: center;
     margin-top: 50px;
 }
+
 .secondsection .box-2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 40px;
 }
+
 .secondsection .box-2 .vertical {
     flex: 1 1 200px;
     margin: 20px;
     text-align: center;
 }
+
 .section3 h1 {
     font-size: 2rem;
     text-align: center;
 }
+
 .main .hr2 {
     margin-top: 100px;
 }
+
 .section3-heading {
     font-size: 2rem;
     margin-top: 30px;
     text-align: center;
 }
+
 .section3 {
     display: flex;
     justify-content: space-around;
@@ -159,17 +210,51 @@ main hr {
     align-items: center;
     flex-wrap: wrap;
 }
+
 .section3 .leftsection {
     width: 100%;
     text-align: center;
     margin-bottom: 30px;
 }
+
+/*Project section styles*/
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.project h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+.project p {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.project a {
+    color: #6a1b9a;
+    font-weight: 500;
+}
+
+.project a:hover {
+    color: #4a148c;
+}
+
 footer {
     background-color: rgb(12, 12, 50);
     padding-top: 20px;
     color: white;
     text-align: center;
 }
+
 .footer {
     display: flex;
     justify-content: space-evenly;
@@ -177,71 +262,44 @@ footer {
     margin: auto;
     flex-wrap: wrap;
 }
+
 .footer-items {
     display: flex;
     gap: 0.5rem;
 }
+
 .footer-items a {
     text-decoration: none;
     color: white;
 }
+
 .footer-items li {
     list-style: none;
 }
+
 .footer-items img {
     width: 20px;
     height: 20px;
 }
+
 .footer-second ul {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     margin-bottom: 20px;
 }
+
 .footer-rights {
     text-align: center;
     margin-top: 20px;
     color: gray;
 }
+
 .footer-third img {
     width: 70px;
     margin-bottom: 20px;
 }
 
-/* Dropdown Styles Start */
-nav ul li.dropdown {
-    position: relative;
-}
-nav ul li.dropdown ul.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgb(18, 18, 62);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    top: 100%;
-    left: 0;
-    width: 200%;
-    padding: 10px 0;
-}
-nav ul li.dropdown ul.dropdown-content li {
-    margin: 0;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-}
-nav ul li.dropdown ul.dropdown-content li a {
-    color: white;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-}
-nav ul li.dropdown ul.dropdown-content li a:hover {
-    background-color: rgb(27, 27, 70);
-    color: rgb(151, 151, 255);
-}
-nav ul li.dropdown:hover ul.dropdown-content {
-    display: block;
-}
-/* Dropdown Styles End */
 .btn {
     display: inline-block;
     padding: 12px;
@@ -251,12 +309,17 @@ nav ul li.dropdown:hover ul.dropdown-content {
     border: 2px solid white;
     font-size: 1rem;
     cursor: pointer;
-    text-decoration: none; /* Remove underline */
-    text-align: center; /* Center text */
-    margin-right: 10px; /* Optional, if you need some spacing */
+    text-decoration: none;
+    /* Remove underline */
+    text-align: center;
+    /* Center text */
+    margin-right: 10px;
+    /* Optional, if you need some spacing */
 }
+
 .btn:hover {
-    background-color: rgb(151, 151, 255); /* Optional hover effect */
+    background-color: rgb(151, 151, 255);
+    /* Optional hover effect */
     color: black;
 }
 
@@ -266,35 +329,59 @@ nav ul li.dropdown:hover ul.dropdown-content {
         flex-direction: column;
         align-items: center;
     }
-    .firstsection > div {
+
+    .firstsection>div {
         width: 100%;
         text-align: center;
     }
+
     .rightsection img {
         max-width: 80%;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 770px) {
     nav {
-        flex-direction: column;
         align-items: center;
         height: auto;
+        justify-content: space-between;
+        padding: 25px 42px;
     }
+
     nav ul {
-        margin-top: 20px;
         flex-direction: column;
+        position: absolute;
+        right: -120%;
+        transition: all 0.5s;
+        width: 170px;
+        background-color: black;
+        padding: 20px;
+        top: 0;
+        display: none;
     }
+
     nav ul li {
-        margin: 10px 0;
+        margin: 5px 0;
     }
+
     .secondsection .box .vertical {
         flex: 1 1 300px;
     }
+
     .secondsection .box-2 .vertical {
         flex: 1 1 300px;
     }
+
     .section3 .leftsection {
+        width: 100%;
+    }
+
+    .ham {
+        display: block;
+        cursor: pointer;
+    }
+
+    .project {
         width: 100%;
     }
 }

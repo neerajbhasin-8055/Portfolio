@@ -17,23 +17,18 @@
             </div>
             <div class="right">
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="#">Projects</a>
-                        <ul class="dropdown-content">
-                            <li><a href="https://neerajbhasin-8055.github.io/Portfolio/">Portfolio</a></li>
-                            <li><a href="https://neerajbhasin-8055.github.io/Quick-Sign-App/">Quick Sign App</a></li>
-                            <li><a href="/project3">Project 3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./contact.html">Contact Me</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
                 </ul>
+                <img class="ham" src="./hamburger.svg" alt="menu">
+                <img class="cross" src="./cross.svg" alt="close">
             </div>
         </nav>
     </header>
     <main>
-        <section class="firstsection">
+        <section class="firstsection" id="home">
             <div class="leftsection">
                 Hi, My name is <span class="purple">Neeraj</span>
                 <div>
@@ -115,7 +110,7 @@
                         JavaScript
                     </div>
                     <div class="vertical-desc">
-                        Experienced in JavaScript, I develop dynamic and interactive web applications, enhancing user experience through robust client-side scripting
+                        Experienced in JavaScript, I develop dynamic and interactive web applications, enhancing user experience through robust client-side scripting.
                     </div>
                 </div>
                 <div class="vertical">
@@ -138,15 +133,37 @@
                 </div>
              </div>
         </section>
-        <hr class="hr2">
-        <h1 class="section3-heading">Education</h1>
-        <section class="section3">
-            <div class="leftsection">
-                Chaitanya Bharathi Institute Of Technology 
-                <div>(2022-2026)</div>
+        <hr>
+        <section id="projects">
+            <h1 class="section3-heading">Projects</h1>
+            <div class="project">
+                <h2>Portfolio</h2>
+                <p><a href="https://neerajbhasin-8055.github.io/Portfolio/">View Project</a></p>
+                <p>Description of the portfolio project.</p>
             </div>
-            <div class="rightsection">
-                <img src="./images/Chaitanya_Bharathi_Institute_of_Technology_logo.png">
+            <div class="project">
+                <h2>Quick Sign App</h2>
+                <p><a href="https://neerajbhasin-805.io/Quick-Sign-App/">View Project</a></p>
+                <p>Description of the Quick Sign App project.</p>
+            </div>
+            <div class="project">
+                <h2>Project 3</h2>
+                <p><a href="/project3">View Project</a></p>
+                <p>Description of project 3.</p>
+            </div>
+        </section>
+        
+        <hr class="hr2">
+        <section id="about">
+            <h1 class="section3-heading">Education</h1>
+            <div class="section3">
+                <div class="leftsection">
+                    Chaitanya Bharathi Institute Of Technology 
+                    <div>(2022-2026)</div>
+                </div>
+                <div class="rightsection">
+                    <img src="./images/Chaitanya_Bharathi_Institute_of_Technology_logo.png">
+                </div>
             </div>
         </section>
     </main>
@@ -166,9 +183,7 @@
                 <div><img src="./images/developer.png">
                     <p>www.neerajsportfolio.com</p>
                 </div>
-               
             </div>
-            <!-- <div class="footer-fourth"></div> -->
         </div>
         <div class="footer-rights">
             <p>© 2024 Neeraj | All rights reserved.</p>
@@ -177,8 +192,26 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
-          strings: ['Web Developer','Programmer'],
+          strings: ['Web Developer', 'Programmer'],
           typeSpeed: 50,
+        });
+
+        let hamburger = document.querySelector('.ham');
+        let cross = document.querySelector('.cross');
+        let navUl = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            navUl.style.right = 0;
+            navUl.style.display = 'block';
+            hamburger.style.display = 'none';
+            cross.style.display = 'block';
+        });
+
+        cross.addEventListener('click', () => {
+            navUl.style.right = '-120%';
+            cross.style.display = 'none';
+            hamburger.style.display = 'block';
+            navUl.style.display = 'none';
         });
     </script>
 </body>

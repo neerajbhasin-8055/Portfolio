@@ -9,13 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <style>
-        body {
-            background-color: #000021;
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
         .contact-container {
             max-width: 1000px;
             margin: 50px auto;
@@ -52,70 +45,6 @@
         .contact-container ul li a:hover {
             color: #ffffff;
         }
-        nav {
-            padding-top: 1.7rem;
-            display: flex;
-            justify-content: space-around;
-            height: 80px;
-            background-color: rgb(18, 18, 62);
-        }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            position: relative;
-        }
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
-            position: relative;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-        }
-        nav ul li a:hover {
-            font-size: 1.04rem;
-            color: rgb(151, 151, 255);
-        }
-        nav ul li ul.dropdown {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: rgb(18, 18, 62);
-            padding: 10px 0;
-            z-index: 1000;
-        }
-        nav ul li ul.dropdown li {
-            margin: 0;
-        }
-        nav ul li ul.dropdown li a {
-            padding: 10px 20px;
-            display: block;
-            color: white;
-        }
-        nav ul li ul.dropdown li a:hover {
-            background-color: rgb(151, 151, 255);
-            color: white;
-        }
-        nav ul li:hover ul.dropdown {
-            display: block;
-        }
-        /* Responsive Styles */
-        @media screen and (max-width: 768px) {
-            nav {
-                height: auto;
-                padding: 20px 10px;
-                flex-direction: column;
-                align-items: center;
-            }
-            nav ul {
-                flex-direction: column;
-            }
-            nav ul li {
-                margin: 10px 0;
-            }
-        }
     </style>
 </head>
 <body id="home">
@@ -130,14 +59,11 @@
                     <li><a href="./about.html">About</a></li>
                     <li>
                         <a href="#">Projects</a>
-                        <ul class="dropdown">
-                            <li><a href="https://neerajbhasin-8055.github.io/Portfolio/">Portfolio</a></li>
-                            <li><a href="https://neerajbhasin-8055.github.io/Quick-Sign-App/">Quick Sign App</a></li>
-                            <li><a href="/project3">Project 3</a></li>
-                        </ul>
                     </li>
                     <li><a href="./contact.html">Contact Me</a></li>
                 </ul>
+                <img class="ham" src="./hamburger.svg" alt="menu">
+                <img class="cross" src="./cross.svg" alt="close">
             </div>
         </nav>
     </header>
@@ -176,5 +102,24 @@
             <p>© 2024 Neeraj | All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        let hamburger = document.querySelector('.ham');
+        let cross = document.querySelector('.cross');
+        let navUl = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            navUl.style.right = 0;
+            navUl.style.display = 'block';
+            hamburger.style.display = 'none';
+            cross.style.display = 'block';
+        });
+
+        cross.addEventListener('click', () => {
+            navUl.style.right = '-120%';
+            cross.style.display = 'none';
+            hamburger.style.display = 'block';
+            navUl.style.display = 'none';
+        });
+    </script>
 </body>
 </html>

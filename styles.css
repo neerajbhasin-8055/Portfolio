@@ -49,3 +49,39 @@ body.dark-mode .transition-transform {
 input:checked + label .transition-transform {
   transform: translateX(1.5rem); /* Adjust according to toggle size */
 }
+.ham-menu {
+  visibility: hidden;
+  /* Hidden by default */
+  opacity: 0;
+  max-height: 0;
+  /* Collapses the menu */
+  overflow: hidden;
+  /* Ensures content is hidden when collapsed */
+  transform: translateY(-20px);
+  /* Slightly move the menu up */
+  transition: visibility 0s linear 0.5s, opacity 0.5s ease, max-height 0.5s ease, transform 0.5s ease;
+}
+
+.ham-menu.show {
+  visibility: visible;
+  /* Make it visible */
+  opacity: 1;
+  max-height: 500px;
+  /* Expand the menu */
+  transform: translateY(0);
+  /* Move it to its original position */
+  transition-delay:0.2s
+  /* No delay for these transitions */
+}
+#ham,#cross{
+  display: none;
+}
+  
+@media only screen and (max-width: 768px) {
+  .desktop-nav{
+    display: none;
+  }
+  #ham{
+    display: block;
+  }
+}

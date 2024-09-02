@@ -1,387 +1,51 @@
-/* Base Styles */
-* {
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* overflow-x: hidden;  */
+    background-color: #fff;
+    color: #333;
+    /* position: relative; */
 }
 
-body {
-    background-color: rgb(0, 0, 33);
-    color: white;
-    font-family: 'Poppins', 'sans-serif';
-    /* overflow-x: hidden; Prevent horizontal scrolling */
+header {
+    background: linear-gradient(to right, #000, #fff);
+    color: #fff;
+    padding: 20px;
+
+    
 }
 
 nav {
-    padding-top: 1.7rem;
     display: flex;
     justify-content: space-around;
-    height: 80px;
-    background-color: rgb(18, 18, 62);
-    position: relative;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    list-style: none;
-    margin: 0 23px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-    font-size: 1.04rem;
-    color: rgb(151, 151, 255);
-}
-
-nav .right {
-    display: flex;
-}
-
-.ham {
-    filter: invert(1);
-    width: 25px;
-    display: none;
-}
-
-.cross {
-    filter: invert(1);
-    width: 25px;
-    display: none;
-}
-
-.left {
-    font-size: 1.3rem;
-}
-
-.firstsection {
-    display: flex;
-    justify-content: space-around;
-    margin: 80px 0;
     align-items: center;
-    flex-wrap: wrap;
-}
-
-.firstsection>div {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.leftsection {
-    font-size: 2.5rem;
-}
-
-.leftsection .buttons {
-    padding-top: 20px;
-}
-
-.leftsection .btn {
-    padding: 12px;
-    border-radius: 6px;
-    background-color: rgb(27, 27, 70);
-    color: white;
-    border: 2px solid white;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-.rightsection img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 50px;
-}
-
-.purple {
-    color: rgb(170, 62, 170);
-}
-
-#element {
-    color: rgb(170, 62, 170);
-}
-
-.secondsection {
-    max-width: 80vw;
-    margin: auto;
-    margin-top: 50px;
-    padding: 0 20px;
-}
-
-main hr {
-    border: 0;
-    height: 0.4px;
-    background-color: rgb(67, 67, 113);
-    margin-top: 80px;
-}
-
-.secondsection h1 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.gray {
-    color: gray;
-    text-align: center;
-}
-
-.secondsection .box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 40px;
-}
-
-.secondsection .box .vertical {
-    flex: 1 1 200px;
-    margin: 20px;
-    text-align: center;
-}
-
-.vertical-img {
-    width: 50px;
-    margin-bottom: 10px;
-}
-
-.vertical-title {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.vertical-desc {
-    font-size: 0.9rem;
-    color: gray;
-}
-
-.skill-set {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-top: 30px;
-}
-
-.secondsection .box2-heading {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.secondsection .box-2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 40px;
-}
-
-.secondsection .box-2 .vertical {
-    flex: 1 1 200px;
-    margin: 20px;
-    text-align: center;
-}
-
-.section3 h1 {
-    font-size: 2rem;
-    text-align: center;
-}
-
-.main .hr2 {
-    margin-top: 100px;
-}
-
-.section3-heading {
-    font-size: 2rem;
-    margin-top: 30px;
-    text-align: center;
-}
-
-.section3 {
-    display: flex;
-    justify-content: space-around;
-    margin: 50px 0;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.section3 .leftsection {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/*Project section styles*/
-.project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 5px;
-}
-
-.project h2 {
-    margin: 10px 0;
-    font-size: 1.5em;
-}
-
-.project p {
-    text-align: center;
-    margin: 10px 0;
-}
-
-.project a {
-    color: #6a1b9a;
-    font-weight: 500;
-}
-
-.project a:hover {
-    color: #4a148c;
-}
-
-footer {
-    background-color: rgb(12, 12, 50);
-    padding-top: 20px;
-    color: white;
-    text-align: center;
-}
-
-.footer {
-    display: flex;
-    justify-content: space-evenly;
-    max-width: 1280px;
-    margin: auto;
-    flex-wrap: wrap;
-}
-
-.footer-items {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.footer-items a {
-    text-decoration: none;
-    color: white;
-}
-
-.footer-items li {
-    list-style: none;
-}
-
-.footer-items img {
-    width: 20px;
-    height: 20px;
-}
-
-.footer-second ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-bottom: 20px;
-}
-
-.footer-rights {
-    text-align: center;
-    margin-top: 20px;
-    color: gray;
-}
-
-.footer-third img {
-    width: 70px;
-    margin-bottom: 20px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px;
-    border-radius: 6px;
-    background-color: rgb(27, 27, 70);
-    color: white;
-    border: 2px solid white;
-    font-size: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    /* Remove underline */
-    text-align: center;
-    /* Center text */
-    margin-right: 10px;
-    /* Optional, if you need some spacing */
-}
-
-.btn:hover {
-    background-color: rgb(151, 151, 255);
-    /* Optional hover effect */
     color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+
 }
 
-/* Media Queries */
-@media (max-width: 1024px) {
-    .firstsection {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .firstsection>div {
-        width: 100%;
-        text-align: center;
-    }
-
-    .rightsection img {
-        max-width: 80%;
-    }
+body.dark-mode {
+  background-color: #121212;
+  color: white;
 }
 
-@media (max-width: 770px) {
-    nav {
-        align-items: center;
-        height: auto;
-        justify-content: space-between;
-        padding: 25px 42px;
-    }
+body.dark-mode .bg-gray-600 {
+  background-color: #333;
+}
 
-    nav ul {
-        flex-direction: column;
-        position: absolute;
-        right: -120%;
-        transition: all 0.5s;
-        width: 170px;
-        background-color: black;
-        padding: 20px;
-        top: 0;
-        display: none;
-    }
+body.dark-mode .bg-white {
+  background-color: #555;
+}
 
-    nav ul li {
-        margin: 5px 0;
-    }
+body.dark-mode .transition-transform {
+  transform: translateX(1.5rem); /* Adjust according to toggle size */
+}
 
-    .secondsection .box .vertical {
-        flex: 1 1 300px;
-    }
-
-    .secondsection .box-2 .vertical {
-        flex: 1 1 300px;
-    }
-
-    .section3 .leftsection {
-        width: 100%;
-    }
-
-    .ham {
-        display: block;
-        cursor: pointer;
-    }
-
-    .project {
-        width: 100%;
-    }
+/* Ensure the toggle's background color and transform are correctly applied */
+input:checked + label .transition-transform {
+  transform: translateX(1.5rem); /* Adjust according to toggle size */
 }

@@ -1,218 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neeraj Bhasin - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .ham-menu {
+      visibility: hidden;
+      /* Hidden by default */
+      opacity: 0;
+      max-height: 0;
+      /* Collapses the menu */
+      overflow: hidden;
+      /* Ensures content is hidden when collapsed */
+      transform: translateY(-20px);
+      /* Slightly move the menu up */
+      transition: visibility 0s linear 0.5s, opacity 0.5s ease, max-height 0.5s ease, transform 0.5s ease;
+    }
+
+    .ham-menu.show {
+      visibility: visible;
+      /* Make it visible */
+      opacity: 1;
+      max-height: 500px;
+      /* Expand the menu */
+      transform: translateY(0);
+      /* Move it to its original position */
+      transition-delay:0.2s
+      /* No delay for these transitions */
+    }
+    #ham,#cross{
+      display: none;
+    }
+      
+    @media only screen and (max-width: 768px) {
+      .desktop-nav{
+        display: none;
+      }
+      #ham{
+        display: block;
+      }
+}
+  </style>
 </head>
-<body id="home">
-    <header>
-        <nav>
-            <div class="left">
-                Neeraj's Portfolio
-            </div>
-            <div class="right">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="./contact.html">Contact Me</a></li>
-                </ul>
-                <img class="ham" src="./hamburger.svg" alt="menu">
-                <img class="cross" src="./cross.svg" alt="close">
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="firstsection" id="home">
-            <div class="leftsection">
-                Hi, My name is <span class="purple">Neeraj</span>
-                <div>
-                   and I am a passionate 
-                   <span id="element"></span>
-                   <div class="buttons">
-                       <a href="assets/Neeraj Resume.pdf" class="btn" download>Download Resume</a>
-                       <a href="https://github.com/neerajbhasin-8055" class="btn">Visit Github</a>
-                   </div>
-                </div>
-            </div>
-            <div class="rightsection">
-                <img src="./images/new.avif" alt="Neeraj">
-            </div>
-        </section>
-        <hr>
-        <section class="secondsection">
-            <span class="gray">What I have done so far</span>
-             <h1>Skills</h1>
-             <div class="skill-set"><h1>Development</h1></div>
-             <div class="box">
-                <div class="vertical">
-                    <img class="vertical-img" src="./images/html.png">
-                    <div class="vertical-title">
-                        HTML
-                    </div>
-                    <div class="vertical-desc">
-                        Proficient in HTML, I can create structured and semantic web content, ensuring accessibility and SEO optimization.
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="vertical-img" src="./images/social.png">
-                    <div class="vertical-title">
-                        CSS
-                    </div>
-                    <div class="vertical-desc">
-                        Skilled in CSS, I design responsive and visually appealing websites, utilizing modern techniques like Flexbox and Grid.
-                    </div>
-                </div>
-                
-                <div class="vertical">
-                    <img class="vertical-img" src="./images/node-js.png">
-                    <div class="vertical-title">
-                        Node.js
-                    </div>
-                    <div class="vertical-desc">
-                        Proficient in Node.js, I develop efficient server-side applications, utilizing asynchronous programming for optimal performance.
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="vertical-img" src="./images/physics.png">
-                    <div class="vertical-title">
-                        React
-                    </div>
-                    <div class="vertical-desc">
-                        Adept in React, I build scalable and high-performance user interfaces, leveraging component-based architecture and state management.
-                    </div>
-                </div>
-                
-                <div class="vertical">
-                    <img class="vertical-img" src="./images/delivery-truck.png">
-                    <div class="vertical-title">
-                        Express.js
-                    </div>
-                    <div class="vertical-desc">
-                        Experienced in Express.js, I create robust and RESTful APIs, facilitating seamless communication between front-end and back-end systems.
-                    </div>
-                </div>
-                
-             </div>
 
-             <div class="box2-heading">
-                <h1>Programming Languages</h1>
-             </div>
-             <div class="box-2">
-                <div class="vertical">
-                    <img class="vertical-img" src="./images/java-script.png">
-                    <div class="vertical-title">
-                        JavaScript
-                    </div>
-                    <div class="vertical-desc">
-                        Experienced in JavaScript, I develop dynamic and interactive web applications, enhancing user experience through robust client-side scripting.
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="vertical-img" src="./images/python.png">
-                    <div class="vertical-title">
-                        Python
-                    </div>
-                    <div class="vertical-desc">
-                        Skilled in Python, I perform data analysis, automation, and develop back-end solutions with a focus on readability and maintainability.
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="vertical-img" src="./images/java.png">
-                    <div class="vertical-title">
-                        Java
-                    </div>
-                    <div class="vertical-desc">
-                        Proficient in Java, I build reliable and efficient applications, leveraging object-oriented principles and strong typing for robust software development.
-                    </div>
-                </div>
-             </div>
-        </section>
-        <hr>
-        <section id="projects">
-            <h1 class="section3-heading">Projects</h1>
-            <div class="project">
-                <h2>Portfolio</h2>
-                <p><a href="https://neerajbhasin-8055.github.io/Portfolio/">View Project</a></p>
-                <p>Description of the portfolio project.</p>
-            </div>
-            <div class="project">
-                <h2>Quick Sign App</h2>
-                <p><a href="https://neerajbhasin-805.io/Quick-Sign-App/">View Project</a></p>
-                <p>Description of the Quick Sign App project.</p>
-            </div>
-            <div class="project">
-                <h2>Project 3</h2>
-                <p><a href="/project3">View Project</a></p>
-                <p>Description of project 3.</p>
-            </div>
-        </section>
+<body>
+  <!--Desktop Navbar-->
+  <nav id="" class="flex items-center justify-between p-6 bg-white text-black">
+    <div class="text-3xl font-bold">Neeraj Bhasin</div>
+    <ul class="flex space-x-4">
+      <li class="desktop-nav "><a href="#About" class="hover:text-gray-300">About</a></li>
+      <li class="desktop-nav "><a href="#Skills" class="hover:text-gray-300">Skills</a></li>
+      <li class="desktop-nav "><a href="#Projects" class="hover:text-gray-300">Projects</a></li>
+      <li class="desktop-nav "><a href="#Education" class="hover:text-gray-300">Education</a></li>
+      <li class="desktop-nav "><a href="#Contact" class="hover:text-gray-300">Contact</a></li>
+      <li id="ham" class="ham-show cursor-pointer"><img src="./assets/hamburger.svg" width="24" height="24"></li>
+      <li id="cross" class="cross-show cursor-pointer"><img src="./assets/cross.svg" width="24" height="24"></li>
+    </ul>
+  </nav>
+  <!--Mobile Nav-->
+  <div class="flex justify-center ham-menu">
+    <ul class="flex flex-col gap-4 items-center mb-4 justify-center ">
+      <li><a href="#About" class="hover:text-gray-300">About</a></li>
+      <li><a href="#Skills" class="hover:text-gray-300">Skills</a></li>
+      <li><a href="#Projects" class="hover:text-gray-300">Projects</a></li>
+      <li><a href="#Education" class="hover:text-gray-300">Education</a></li>
+      <li><a href="#Contact" class="hover:text-gray-300">Contact</a></li>
+    </ul>
+  </div>
+
+
+  <header class="bg-gradient-to-r from-gray-900 to-white  text-white py-20">
+    <div class="container mx-auto text-center">
+      <h1 class="text-5xl font-bold">Neeraj Bhasin</h1>
+      <p class="mt-4 text-lg">Web Developer | Computer Science Student | Tech Enthusiast</p>
+      <div class="mt-6 space-x-4">
+        <a href="./assets/Neeraj's updated_Resume.pdf"
+          class="bg-white text-black font-bold mt-2 py-3 px-4 rounded hover:bg-gray-200" download="">Download Resume</a>
+        <a href="https://github.com/neerajbhasin-8055"
+          class="bg-white text-black font-bold py-3 mt-2 px-4 rounded hover:bg-gray-200">Visit Github</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="About" class="py-16 mx-16 bg-white">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+        <!-- Text Content -->
+        <div class="md:w-1/2 mb-8 md:mb-0">
+            <h2 class="text-4xl font-bold mb-4">About Me</h2>
+            <p class="text-lg text-gray-500 mb-6">Hello! I'm Neeraj Bhasin, a passionate web developer and computer science
+                student at Chaitanya Bharathi Institute of Technology, Hyderabad. I'm currently pursuing my Bachelor's degree in
+                Computer Science and Engineering (2022-2026).</p>
+            <p class="text-lg text-gray-500 mb-6">My journey in tech is driven by a fascination for creating innovative web
+                solutions. I specialize in full-stack development, with a strong foundation in both frontend and backend
+                technologies. My experience ranges from building personal projects to collaborating on team initiatives.</p>
+            <p class="text-lg text-gray-500">When I'm not coding, you can find me participating in hackathons, or exploring the latest advancements in web technologies. I'm always eager to learn and
+                take on new challenges that allow me to grow both personally and professionally.</p>
+        </div>
         
-        <hr class="hr2">
-        <section id="about">
-            <h1 class="section3-heading">Education</h1>
-            <div class="section3">
-                <div class="leftsection">
-                    Chaitanya Bharathi Institute Of Technology 
-                    <div>(2022-2026)</div>
-                </div>
-                <div class="rightsection">
-                    <img src="./images/Chaitanya_Bharathi_Institute_of_Technology_logo.png">
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footer">
-            <div class="footer-first">
-                Neeraj's Portfolio
-            </div>
-            <div class="footer-second">
-                <ul>
-                    <div class="footer-items"><img src="./images/github.png"><li><a href="https://github.com/neerajbhasin-8055">Github</a></li></div>
-                    <div class="footer-items"><img src="./images/linkedin.png"><li><a href="https://www.linkedin.com/in/neeraj-bhasin-06506129b/">LinkedIn</a></li></div>
-                    <div class="footer-items"><img src="./images/instagram.png"><li><a href="https://www.instagram.com/neeraj_.0_1/">Instagram</a></li></div>
-                </ul>
-            </div>
-            <div class="footer-third">
-                <div><img src="./images/developer.png">
-                    <p>www.neerajsportfolio.com</p>
-                </div>
+        <!-- Image Section -->
+        <div class="md:w-1/2 flex justify-center">
+            <div class=" overflow-hidden rounded-full">
+                <img src="./assets/insta_profile.jpg" alt="Profile Picture" class=" object-cover" width="500px" height="500px">
             </div>
         </div>
-        <div class="footer-rights">
-            <p>© 2024 Neeraj | All rights reserved.</p>
+    </div>
+</section>
+
+
+
+
+  <section id="Skills" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-8 mx-16">Skills & Expertise</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white py-10 px-6 border border-gray-300 rounded-lg shadow-lg">
+          <div class="flex items-center mb-4">
+            <!-- Add SVG icon here -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+              fill="none">
+              <path d="M17 4L8.66943 10.0405C6.44352 11.6545 6.44353 12.3455 8.66943 13.9595L17 20"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+              fill="none">
+              <path d="M7 4L15.3306 10.0405C17.5565 11.6545 17.5565 12.3455 15.3306 13.9595L7 20" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <h3 class="text-xl font-semibold ml-2">Programming Languages</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">Python</span>
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">Java</span>
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">JavaScript</span>
+          </div>
         </div>
-    </footer>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('#element', {
-          strings: ['Web Developer', 'Programmer'],
-          typeSpeed: 50,
-        });
+        <div class="bg-white py-10 px-6 rounded-lg shadow-lg">
+          <div class="flex items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+              fill="none">
+              <path
+                d="M16.6127 16.0846C13.9796 17.5677 12.4773 20.6409 12 21.5V8C12.4145 7.25396 13.602 5.11646 15.6317 3.66368C16.4868 3.05167 16.9143 2.74566 17.4572 3.02468C18 3.30371 18 3.91963 18 5.15146V13.9914C18 14.6568 18 14.9895 17.8634 15.2233C17.7267 15.4571 17.3554 15.6663 16.6127 16.0846L16.6127 16.0846Z"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M12 7.80556C11.3131 7.08403 9.32175 5.3704 5.98056 4.76958C4.2879 4.4652 3.44157 4.31301 2.72078 4.89633C2 5.47965 2 6.42688 2 8.32133V15.1297C2 16.8619 2 17.728 2.4626 18.2687C2.9252 18.8095 3.94365 18.9926 5.98056 19.3589C7.79633 19.6854 9.21344 20.2057 10.2392 20.7285C11.2484 21.2428 11.753 21.5 12 21.5C12.247 21.5 12.7516 21.2428 13.7608 20.7285C14.7866 20.2057 16.2037 19.6854 18.0194 19.3589C20.0564 18.9926 21.0748 18.8095 21.5374 18.2687C22 17.728 22 16.8619 22 15.1297V8.32133C22 6.42688 22 5.47965 21.2792 4.89633C20.5584 4.31301 19 4.76958 18 5.5"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <h3 class="text-xl font-semibold ml-2">Frontend</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">React</span>
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">HTML</span>
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">CSS</span>
+          </div>
+        </div>
+        <div class="bg-white py-10 px-6 rounded-lg shadow-lg">
+          <div class="flex items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+              fill="none">
+              <ellipse cx="12" cy="5" rx="8" ry="3" stroke="currentColor" stroke-width="1.5" />
+              <path d="M7 10.842C7.60158 11.0229 8.27434 11.1718 9 11.282" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" />
+              <path d="M20 12C20 13.6569 16.4183 15 12 15C7.58172 15 4 13.6569 4 12" stroke="currentColor"
+                stroke-width="1.5" />
+              <path d="M7 17.842C7.60158 18.0229 8.27434 18.1718 9 18.282" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" />
+              <path d="M20 5V19C20 20.6569 16.4183 22 12 22C7.58172 22 4 20.6569 4 19V5" stroke="currentColor"
+                stroke-width="1.5" />
+            </svg>
+            <h3 class="text-xl font-semibold ml-2">Backend</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">Node.js</span>
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">Express.js</span>
+          </div>
+        </div>
+        <div class="bg-white py-10 px-6 rounded-lg shadow-lg">
+          <div class="flex items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+              fill="none">
+              <ellipse cx="12" cy="5" rx="8" ry="3" stroke="currentColor" stroke-width="1.5" />
+              <path d="M7 10.842C7.60158 11.0229 8.27434 11.1718 9 11.282" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" />
+              <path d="M20 12C20 13.6569 16.4183 15 12 15C7.58172 15 4 13.6569 4 12" stroke="currentColor"
+                stroke-width="1.5" />
+              <path d="M7 17.842C7.60158 18.0229 8.27434 18.1718 9 18.282" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" />
+              <path d="M20 5V19C20 20.6569 16.4183 22 12 22C7.58172 22 4 20.6569 4 19V5" stroke="currentColor"
+                stroke-width="1.5" />
+            </svg>
+            <h3 class="text-xl font-semibold ml-2">Databases</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">MongoDB</span>
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">MySQL</span>
+          </div>
+        </div>
+        <div class="bg-white py-10 px-6 rounded-lg shadow-lg">
+          <div class="flex items-center mb-4">
+            <!-- Add SVG icon here -->
+            <h3 class="text-xl font-semibold ml-2">Tools</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">Git</span>
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">GitHub</span>
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">VS Code</span>
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">IDLE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        let hamburger = document.querySelector('.ham');
-        let cross = document.querySelector('.cross');
-        let navUl = document.querySelector('nav ul');
+  <section id="Projects" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-8 mx-16 ">Featured Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="./assets/pf.png" alt="Project 1" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Personal Portfolio Site</h3>
+            <p class="text-gray-700 mb-4">A personal portfolio site showcasing various projects and skills. Built with
+              modern web technologies to highlight my work and expertise.</p>
+            <a href="https://github.com/neerajbhasin-8055/Portfolio" class="text-indigo-600 hover:text-indigo-800 font-semibold">View Project</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="./assets/chat-app.png" alt="Project 2" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Chat-App</h3>
+            <p class="text-gray-700 mb-4">A real-time chat application featuring user authentication, message exchange,
+              and media sharing. Built with React, Node.js, and Socket.io.</p>
+            <a href="https://github.com/neerajbhasin-8055/Real-time-chat-application" class="text-indigo-600 hover:text-indigo-800 font-semibold">View Project</a>
+          </div>
+        </div>
 
-        hamburger.addEventListener('click', () => {
-            navUl.style.right = 0;
-            navUl.style.display = 'block';
-            hamburger.style.display = 'none';
-            cross.style.display = 'block';
-        });
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="./assets/pg-life.png" alt="Project 4" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">PG Life</h3>
+            <p class="text-gray-700 mb-4">A platform designed for PG (Paying Guest) accommodations, including features
+              like property listings, booking management, and user reviews.</p>
+            <a href="https://github.com/neerajbhasin-8055/PG-Life" class="text-indigo-600 hover:text-indigo-800 font-semibold">View Project</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="./assets/pg-life.png" alt="Project 5" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Feedback Collection System</h3>
+            <p class="text-gray-700 mb-4">A system for collecting and analyzing feedback from users. Features include
+              customizable surveys, analytics dashboards, and data export options.</p>
+            <a href="#" class="text-indigo-600 hover:text-indigo-800 font-semibold">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        cross.addEventListener('click', () => {
-            navUl.style.right = '-120%';
-            cross.style.display = 'none';
-            hamburger.style.display = 'block';
-            navUl.style.display = 'none';
-        });
-    </script>
+
+
+  <section id="Education" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-8 mx-16">Education</h2>
+      <div class="space-y-8">
+        <div class="bg-gray-20 p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-2">Chaitanya Bharathi Institute of Technology, Hyderabad</h3>
+          <p class="text-lg font-semibold mb-2">Bachelor's in Computer Science and Engineering</p>
+          <span class="text-gray-600 mb-4 block">2022 - 2026</span>
+          <p class="text-gray-700 mb-4">Currently pursuing my degree with a focus on web development and software
+            engineering.</p>
+          <div class="text-gray-600">
+            <p class="font-semibold">Key Achievements:</p>
+            <ul class="list-disc pl-5">
+              <li>Participated in multiple hackathons</li>
+              <!-- Add more achievements if needed -->
+            </ul>
+          </div>
+        </div>
+        <!-- Add more education entries if needed -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="flex flex-col justify-center items-center md:flex-row bg-white text-black py-8 px-6">
+    <section id="Contact" class="py-16 mx-4 shadow-lg my-2 rounded-lg w-full md:w-1/2 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-8 text-center">Get in Touch</h2>
+        <p class="text-lg text-gray-400 mb-8 text-center">
+          I'm always open to new opportunities, collaborations, or just a friendly chat about technology. Feel free to
+          reach out to me through the form below:
+        </p>
+        <form action="https://formspree.io/f/xpwanzpy" method="POST" class="max-w-lg mx-auto">
+          <div class="mb-4">
+            <input type="text" name="name" id="name" placeholder="Your Name"
+              class="w-full p-3 border border-gray-200 bg-white rounded-lg shadow-sm focus:ring focus:ring-gray-300 focus:ring-opacity-50">
+          </div>
+          <div class="mb-4">
+            <input type="email" name="email" id="email" placeholder="Your Email"
+              class="w-full p-3 border border-gray-200 bg-gray-white rounded-lg shadow-sm focus:ring focus:ring-gray-300 focus:ring-opacity-50">
+          </div>
+          <div class="mb-4">
+            <textarea name="message" id="message" rows="4" placeholder="Your Message"
+              class="w-full p-3 border border-gray-200 bg-white rounded-lg shadow-sm focus:ring focus:ring-gray-300 focus:ring-opacity-50"></textarea>
+          </div>
+          <div>
+            <button type="submit"
+              class="w-full p-3 bg-black text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-300">Send
+              Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="bg-white mx-4 shadow-lg my-2 rounded-lg text-black py-8 w-full md:w-1/2">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
+        <p class="text-lg text-gray-400 mb-8 text-center">
+          These are my social Links
+          reach out to me through the links below :
+        </p>
+        <div class="flex flex-col  gap-4 ">
+          <a href="mailto:bassanneeraj@gmail.com" class="hover:text-gray-700 flex justify-center gap-3  "
+            aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+              fill="none">
+              <path d="M2 6L8.91302 9.91697C11.4616 11.361 12.5384 11.361 15.087 9.91697L22 6" stroke="currentColor"
+                stroke-width="1.5" stroke-linejoin="round" />
+              <path
+                d="M2.01577 13.4756C2.08114 16.5412 2.11383 18.0739 3.24496 19.2094C4.37608 20.3448 5.95033 20.3843 9.09883 20.4634C11.0393 20.5122 12.9607 20.5122 14.9012 20.4634C18.0497 20.3843 19.6239 20.3448 20.7551 19.2094C21.8862 18.0739 21.9189 16.5412 21.9842 13.4756C22.0053 12.4899 22.0053 11.5101 21.9842 10.5244C21.9189 7.45886 21.8862 5.92609 20.7551 4.79066C19.6239 3.65523 18.0497 3.61568 14.9012 3.53657C12.9607 3.48781 11.0393 3.48781 9.09882 3.53656C5.95033 3.61566 4.37608 3.65521 3.24495 4.79065C2.11382 5.92608 2.08114 7.45885 2.01576 10.5244C1.99474 11.5101 1.99475 12.4899 2.01577 13.4756Z"
+                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+            </svg>
+            Email
+          </a>
+          <a href="https://www.linkedin.com/in/neeraj-bhasin-06506129b/" target="_blank"
+            class="hover:text-gray-700 justify-center flex gap-3 " aria-label="LinkedIn">
+            <!-- Add LinkedIn SVG here -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+              fill="none">
+              <path
+                d="M4.5 9.5H4C3.05719 9.5 2.58579 9.5 2.29289 9.79289C2 10.0858 2 10.5572 2 11.5V20C2 20.9428 2 21.4142 2.29289 21.7071C2.58579 22 3.05719 22 4 22H4.5C5.44281 22 5.91421 22 6.20711 21.7071C6.5 21.4142 6.5 20.9428 6.5 20V11.5C6.5 10.5572 6.5 10.0858 6.20711 9.79289C5.91421 9.5 5.44281 9.5 4.5 9.5Z"
+                stroke="currentColor" stroke-width="1.5" />
+              <path
+                d="M6.5 4.25C6.5 5.49264 5.49264 6.5 4.25 6.5C3.00736 6.5 2 5.49264 2 4.25C2 3.00736 3.00736 2 4.25 2C5.49264 2 6.5 3.00736 6.5 4.25Z"
+                stroke="currentColor" stroke-width="1.5" />
+              <path
+                d="M12.326 9.5H11.5C10.5572 9.5 10.0858 9.5 9.79289 9.79289C9.5 10.0858 9.5 10.5572 9.5 11.5V20C9.5 20.9428 9.5 21.4142 9.79289 21.7071C10.0858 22 10.5572 22 11.5 22H12C12.9428 22 13.4142 22 13.7071 21.7071C14 21.4142 14 20.9428 14 20L14.0001 16.5001C14.0001 14.8433 14.5281 13.5001 16.0879 13.5001C16.8677 13.5001 17.5 14.1717 17.5 15.0001V19.5001C17.5 20.4429 17.5 20.9143 17.7929 21.2072C18.0857 21.5001 18.5572 21.5001 19.5 21.5001H19.9987C20.9413 21.5001 21.4126 21.5001 21.7055 21.2073C21.9984 20.9145 21.9985 20.4432 21.9987 19.5006L22.0001 14.0002C22.0001 11.515 19.6364 9.50024 17.2968 9.50024C15.9649 9.50024 14.7767 10.1531 14.0001 11.174C14 10.5439 14 10.2289 13.8632 9.995C13.7765 9.84686 13.6531 9.72353 13.505 9.63687C13.2711 9.5 12.9561 9.5 12.326 9.5Z"
+                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/neerajbhasin-8055" target="_blank"
+            class="hover:text-gray-700 flex gap-3 justify-center" aria-label="GitHub">
+            <!-- Add GitHub SVG here -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+              fill="none">
+              <path d="M10 20.5675C6.57143 21.7248 3.71429 20.5675 2 17" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M10 22V18.7579C10 18.1596 10.1839 17.6396 10.4804 17.1699C10.6838 16.8476 10.5445 16.3904 10.1771 16.2894C7.13394 15.4528 5 14.1077 5 9.64606C5 8.48611 5.38005 7.39556 6.04811 6.4464C6.21437 6.21018 6.29749 6.09208 6.31748 5.9851C6.33746 5.87813 6.30272 5.73852 6.23322 5.45932C5.95038 4.32292 5.96871 3.11619 6.39322 2.02823C6.39322 2.02823 7.27042 1.74242 9.26698 2.98969C9.72282 3.27447 9.95075 3.41686 10.1515 3.44871C10.3522 3.48056 10.6206 3.41384 11.1573 3.28041C11.8913 3.09795 12.6476 3 13.5 3C14.3524 3 15.1087 3.09795 15.8427 3.28041C16.3794 3.41384 16.6478 3.48056 16.8485 3.44871C17.0493 3.41686 17.2772 3.27447 17.733 2.98969C19.7296 1.74242 20.6068 2.02823 20.6068 2.02823C21.0313 3.11619 21.0496 4.32292 20.7668 5.45932C20.6973 5.73852 20.6625 5.87813 20.6825 5.9851C20.7025 6.09207 20.7856 6.21019 20.9519 6.4464C21.6199 7.39556 22 8.48611 22 9.64606C22 14.1077 19.8661 15.4528 16.8229 16.2894C16.4555 16.3904 16.3162 16.8476 16.5196 17.1699C16.8161 17.6396 17 18.1596 17 18.7579V22"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            GitHub
+          </a>
+
+          <a href="tel:+919541876404" class="hover:text-gray-700 flex gap-3 justify-center" aria-label="Phone">
+            <!-- Add Phone SVG here -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+              fill="none">
+              <path
+                d="M4.74038 14.3685L6.69351 12.9816C7.24445 12.5904 7.80305 12.3282 8.44034 12.1585C9.17201 11.9636 9.5 11.5644 9.5 10.711C9.5 8.54628 14.5 8.31594 14.5 10.711C14.5 11.5644 14.828 11.9636 15.5597 12.1585C16.202 12.3295 16.7599 12.5934 17.3065 12.9816L19.2596 14.3685C20.1434 14.9961 20.5547 15.2995 20.7842 15.7819C21 16.2358 21 16.768 21 17.8324C21 19.7461 21 20.703 20.4642 21.3164C19.8152 22.0593 18.128 21.9955 17.0917 21.9955H6.90833C5.87197 21.9955 4.21909 22.0986 3.5358 21.3164C3 20.703 3 19.7461 3 17.8324C3 16.768 3 16.2358 3.21584 15.7819C3.44526 15.2995 3.85662 14.9961 4.74038 14.3685Z"
+                stroke="currentColor" stroke-width="1.5" />
+              <path
+                d="M14 17C14 18.1046 13.1046 19 12 19C10.8954 19 10 18.1046 10 17C10 15.8954 10.8954 15 12 15C13.1046 15 14 15.8954 14 17Z"
+                stroke="currentColor" stroke-width="1.5" />
+              <path
+                d="M6.96014 3.69772C5.6417 4.07415 4.69384 4.54112 3.82645 5.10455C2.45318 5.9966 1.86443 7.60404 2.02607 9.15513C2.09439 9.81068 2.62064 10.1241 3.23089 9.95455C3.69451 9.82571 4.15888 9.7003 4.61961 9.56364C5.96706 9.16397 6.28399 8.67812 6.47124 7.29885L6.96014 3.69772ZM6.96014 3.69772C10.2186 2.76743 13.7814 2.76743 17.0399 3.69772M17.0399 3.69772C18.3583 4.07415 19.3062 4.54112 20.1735 5.10455C21.5468 5.9966 22.1356 7.60404 21.9739 9.15513C21.9056 9.81068 21.3794 10.1241 20.7691 9.95455C20.3055 9.82571 19.8411 9.7003 19.3804 9.56364C18.0329 9.16397 17.716 8.67812 17.5288 7.29885L17.0399 3.69772Z"
+                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+            </svg>
+            Phone
+          </a>
+          <a href="https://www.instagram.com/neeraj_.0_1/?next=%2F"
+            class="hover:text-gray-700 flex gap-3 justify-center" aria-label="Phone">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+              fill="none">
+              <path
+                d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+              <path
+                d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z"
+                stroke="currentColor" stroke-width="1.5" />
+              <path d="M17.5078 6.5L17.4988 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            Instagram
+          </a>
+        </div>
+        <p class="text-gray-400 text-lg my-16">Feel Free to reach me out.</p>
+      </div>
+    </section>
+  </footer>
+  <p class="text-center text-lg text-gray-500 mx-4 ">&copy; 2024 Neeraj Bhasin. All rights reserved.</p>
+  <script src="script.js"></script>
 </body>
+
 </html>
